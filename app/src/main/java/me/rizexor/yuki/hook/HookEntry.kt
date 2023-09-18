@@ -25,7 +25,7 @@ class HookEntry : IYukiHookXposedInit {
 
     override fun onInit() = configs {
         isDebug = BuildConfig.DEBUG
-        loggerD(msg = "Hello MOD")
+        loggerD(msg = "UTS Mod Initialized")
     }
 
     override fun onHook() = encase {
