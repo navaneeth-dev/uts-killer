@@ -21,7 +21,7 @@ import me.rizexor.yuki.BuildConfig
 @InjectYukiHookWithXposed
 class HookEntry : IYukiHookXposedInit {
     val LocationType get() = Location::class.javaPrimitiveType ?: "location".toClass()
-    val LocationArrayClass get() = ArrayClass(LocationType)
+    val LocationArrayClass get() = ArrayListClass
 
     override fun onInit() = configs {
         isDebug = BuildConfig.DEBUG
@@ -47,7 +47,7 @@ class HookEntry : IYukiHookXposedInit {
                 injectMember {
                     method {
                         name = "isAnyLastThreeCoordinatesSame"
-                        param(LocationArrayClass)
+                        paramCount = 1
                         returnType = BooleanType
                     }
                     replaceAny {
