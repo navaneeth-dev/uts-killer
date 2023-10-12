@@ -2,9 +2,9 @@
 
 Kill shit UTS functionality
 
-_Use along with GPS Setter_
+**Use along with GPS Setter**
 
-Last tested: 12 Oct 2023
+**Last tested**: 12 Oct 2023
 
 ## Features
 
