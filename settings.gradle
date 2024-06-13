@@ -9,10 +9,12 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
-        maven { url 'https://api.xposed.info/' }
-        maven { url 'https://www.jitpack.io' }
-        maven { url 'https://s01.oss.sonatype.org/content/repositories/releases' }
         mavenCentral()
+        maven { url 'https://www.jitpack.io' }
+        // Must be added when used as an Xposed Module, otherwise optional
+        maven { url 'https://api.xposed.info/' }
+        // MavenCentral has a 2-hour cache, if the latest version cannot be integrated, please add this URL
+        maven { url 'https://s01.oss.sonatype.org/content/repositories/releases/' }
     }
 }
 rootProject.name = 'Yuki'
